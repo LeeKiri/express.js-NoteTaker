@@ -41,7 +41,7 @@ module.exports = (app) => {
     fileNotes = JSON.parse(fs.readFileSync("./routes/db/db.json", "utf8"));
     console.log(fileNotes)
 
-    let newFile = fileNotes.filter((note) => note.id !== deleteId)
+    let newFile = fileNotes.filter((n) => n.id !== deleteId)
    
 
     //rewrites the db.json file with the deleted user removed
